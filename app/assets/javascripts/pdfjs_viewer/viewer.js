@@ -74,7 +74,7 @@
       kind: OptionKind.VIEWER + OptionKind.PREFERENCE
     },
     defaultUrl: {
-      value: "compressed.tracemonkey-pldi-09.pdf",
+      value: window.resourceURL,
       kind: OptionKind.VIEWER
     },
     defaultZoomValue: {
@@ -118,7 +118,7 @@
       kind: OptionKind.VIEWER + OptionKind.PREFERENCE
     },
     imageResourcesPath: {
-      value: "./images/",
+      value: "/pdfjs/web/images/",
       kind: OptionKind.VIEWER
     },
     maxCanvasPixels: {
@@ -171,7 +171,7 @@
       kind: OptionKind.API
     },
     cMapUrl: {
-      value: "../web/cmaps/",
+      value: "/pdfjs/web/cmaps/",
       kind: OptionKind.API
     },
     disableAutoFetch: {
@@ -215,7 +215,7 @@
       kind: OptionKind.API
     },
     standardFontDataUrl: {
-      value: "../web/standard_fonts/",
+      value: "/pdfjs/web/standard_fonts/",
       kind: OptionKind.API
     },
     verbosity: {
@@ -227,7 +227,7 @@
       kind: OptionKind.WORKER
     },
     workerSrc: {
-      value: "../build/pdf.worker.js",
+      value: "/pdfjs/build/pdf.worker.js?version=2.13.216",
       kind: OptionKind.WORKER
     }
   };
@@ -241,7 +241,7 @@
       kind: OptionKind.VIEWER
     };
     defaultOptions.sandboxBundleSrc = {
-      value: "../build/pdf.sandbox.js",
+      value: "/pdfjs/build/pdf.sandbox.js",
       kind: OptionKind.VIEWER
     };
     defaultOptions.renderer.kind += OptionKind.PREFERENCE;
@@ -5237,10 +5237,10 @@
   
   var pdfjsLib;
   
-  if (typeof window !== "undefined" && window["pdfjs-dist/build/pdf"]) {
-    pdfjsLib = window["pdfjs-dist/build/pdf"];
+  if (typeof window !== "undefined" && window["pdfjs/build/pdf"]) {
+    pdfjsLib = window["pdfjs/build/pdf"];
   } else {
-    pdfjsLib = require("../build/pdf.js");
+    pdfjsLib = require("/pdfjs/build/pdf.js");
   }
   
   module.exports = pdfjsLib;
