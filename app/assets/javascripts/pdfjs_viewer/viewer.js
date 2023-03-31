@@ -227,7 +227,7 @@
       kind: OptionKind.WORKER
     },
     workerSrc: {
-      value: "/pdfjs/build/pdf.worker.js?version=2.13.216",
+      value: "/pdfjs/build/pdf.worker.min.js?version=2.13.216",
       kind: OptionKind.WORKER
     }
   };

@@ -7413,7 +7413,7 @@ var PDFWorkerUtil = {
 {
   if (_is_node.isNodeJS && typeof require === "function") {
     PDFWorkerUtil.isWorkerDisabled = true;
-    PDFWorkerUtil.fallbackWorkerSrc = "./pdf.worker.js";
+    PDFWorkerUtil.fallbackWorkerSrc = "./pdf.worker.min.js";
   } else if ((typeof document === "undefined" ? "undefined" : _typeof(document)) === "object") {
     var _document, _document$currentScri;
 
